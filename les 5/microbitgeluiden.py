@@ -21,12 +21,12 @@ while True:
         display.show(Image.CONFUSED)
         sleep(2000)
         display.scroll("Hallo")
-        SayTheWords1("yup")
+        SayTheWords1()
     elif button_b.is_pressed(): 
         display.show(Image.MEH)
         sleep(2000)
         display.scroll("Doei")
-        SayTheWords1("Waarom")
+        SayTheWords1()
     elif display.read_light_level() < 50:
         SayTheWords2()
     else:

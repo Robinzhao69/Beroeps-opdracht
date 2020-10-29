@@ -8,11 +8,12 @@ os.system("cls")
 #Je blijft op straat leven.
 def straatleven(): 
      os.system("cls")
-     message = "Je gaat toch niet stelen. \nJe voor nu op straat leven, maar misschien gebeurd er iets onverwachts."
+     message = "Je gaat toch niet stelen. \nJe voor nu op straat leven, maar misschien gebeurd er iets onverwachts..."
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
           time.sleep(0.07)
+     time.sleep(2)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat de gevangenis in.
@@ -23,31 +24,36 @@ def gevangenis2():
           sys.stdout.write(char)
           sys.stdout.flush()
           time.sleep(0.07)
+     time.sleep(2)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat stelen.
 def gevangenis1():
      os.system("cls")
-     print("Je hebt iets gevonden om te stelen. iemand ziet dat je iets steelt. \nDe politie is gebeld. \nDe politie probeert je aan te houden. Jij probeert er tegen in te gaan. ")
+     print("Je hebt iets gevonden om te stelen. \nIemand ziet dat je iets steelt. \nDe politie is gebeld. \nDe politie probeert je aan te houden. Jij probeert ertegenin te gaan. ")
      gevangenis1 = input("\nWat ga je doen \n-------------------------------------------- \nA.agressiever zijn \nB.niks doen \nantwoord: ")
      if gevangenis1.lower() == "a":
           print("Je wordt neergehaald en krijgt een stoot.")
+          time.sleep(5)
           gevangenis2()
      else:
           print("Je wordt neergehaald.")
+          time.sleep(4)
           gevangenis2()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat stelen
 def stelen():
      os.system("cls")
-     print("Je leeft nu al een tijdje op straat. \nJe denkt er aan om te gaan stelen, omdat je honger hebt. ")
+     print("Je leeft nu al een tijdje op straat. \nJe denkt eraan om te gaan stelen, omdat je honger hebt. ")
      stelen = input("\nWat ga je doen?  \n-------------------------------------------- \nA.Je gaat stelen \nB.Je doet niks \n antwoord: ")
      if stelen.lower() == "a":
           print("Je probeert nu te stelen.")
+          time.sleep(5)
           gevangenis1()
      else:
           print("Je gaat toch niet stelen.")
+          time.sleep(5)
           straatleven()
 
 
@@ -63,7 +69,7 @@ def ontslagen():
 #Je hebt nu een baan.
 def werk2():
      os.system("cls")
-     print("Je solliciteert nu bij de hotel. \nJe legt de baas uit wat er allemaal is gebeurd. \nDe baas begrijpt het en houd jou identiteit geheim. \nJe bent aangenomen. \nJe begint nu met je eerste week.")
+     print("Je solliciteert nu bij het hotel. \nJe legt de baas uit wat er allemaal is gebeurd. \nDe baas begrijpt het en houd jouw identiteit geheim. \nJe bent aangenomen. \nJe begint nu met je eerste week.")
      werk2 = input("\nJe hebt de keuze om hard te werken of niet. Wat kies je? \n-------------------------------------------- \nA.hard werken \nB.slecht je werk doen \nantwoord: ")
      if werk2.lower() == "a": 
           message = "Je werkt hard. \nJe wordt nu beloond met een hoger loon. \nJe werkt nu al een tijdje bij de hotel en de baas heeft je geholpen om legaal in Turkije te blijven. \nJe leeft nu een gezond en veilig leven in Turkije. \nJe hebt het werken in turkije einde bereikt."
@@ -71,21 +77,45 @@ def werk2():
                sys.stdout.write(char)
                sys.stdout.flush()
                time.sleep(0.07)
+          time.sleep(2)
      else: 
           print("Je werkt slecht.")
+          time.sleep(3)
           ontslagen()
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Je blijft een zoeken naar werk
+def subwerk1():
+     os.system("cls")
+     message = "Je zit nu al een tijdje rond te zoeken, maar hebt nog steeds niks gevonden. "
+     for char in message:
+               sys.stdout.write(char)
+               sys.stdout.flush()
+               time.sleep(0.07)
+     time.sleep(2)
+     os.system("cls")
+     message = "Ga terug..."
+     for char in message:
+               sys.stdout.write(char)
+               sys.stdout.flush()
+               time.sleep(0.07)
+     time.sleep(1)
+     werk1()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je zoekt werk.
 def werk1():
      os.system("cls")
-     print("Je zit nu als uren te zoeken naar een baantje. \nNa een tijdje zoeken heb je eindelijk iets gevonden. \nje ziet dat er is een hotel dat personeel zoekt.")
+     print("Je zit nu als uren te zoeken naar een baantje. \nNa een tijdje zoeken heb je eindelijk iets gevonden. \nJe ziet dat er is een hotel dat personeel zoekt.")
      werk1 = input("\nWat ga je doen? \n-------------------------------------------- \nA.Naar binnen lopen \nB.door zoeken \nantwoord: ")
      if werk1.lower() == "a":
           print("Je gaat solliciteren bij de hotel.")
+          time.sleep(5)
           werk2()
      else: 
           print("Je gaat door zoeken naar werk.")
+          time.sleep(5)
+          subwerk1()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je bent in Turkije aangekomen. 
@@ -95,21 +125,60 @@ def turkije1():
      turkije1 = input("\nWat kies jij om te doen? \n-------------------------------------------- \nA.werk zoeken \nB.op straat leven \nantwoord: ") 
      if turkije1.lower() == "a": 
           print("Je gaat werk zoeken.")
+          time.sleep(5)
           werk1()
      else: 
           print("Je gaat op straat leven.")
+          time.sleep(5)
           stelen()
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#de persoon achter de balie begrijpt het en geeft het door
+def nederland6():
+     os.system("cls")
+     message = "Je hebt alles vertelt. \nDe persoon achter de balie zegt tegen je, dat je weer plaats mag nemen totdat er een reactie is geven."
+     for char in message:
+          sys.stdout.write(char)
+          sys.stdout.flush()
+          time.sleep(0.07)
+     time.sleep(2)
+     
+     message = "even later..."
+     for char in message:
+          sys.stdout.write(char)
+          sys.stdout.flush()
+          time.sleep(0.07)
+     time.sleep(2)
+     os.system("cls")
+
+     message = "Je hoort dat je verzoek is geaccepteerd. \nJe bent heel blij. \nde persoon achter de balie zegt tegen je, dat je een inburgeringsexamen moet doen om echt in Nederland te blijven. \nTot die tijd mag je nog blijven."
+     for char in message:
+          sys.stdout.write(char)
+          sys.stdout.flush()
+          time.sleep(0.07)
+     time.sleep(2)
+     os.system("cls")
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat naar het azielzoekerscentrum.
 def nederland5():
-     os.system
+     os.system("cls")
+     print("Je bent bij het asielzoekerscentrum aangekomen. \nDaar wordt er aan je gevraagd wat er is gebeurd. ")
+     nederland5 = input("\n Wat ga je zeggen? \n-------------------------------------------- \nA.Ik ben gevlucht, omdat er oorlog in mijn land is. \nB.zeg niks \nantwoord: ")
+     if nederland5.lower() == "a":
+          print("Je vertelt wat er allemaal is gebeurd.")
+          time.sleep(5)
+          nederland6()
+     else:
+          print("Je moet antwoord geven.")
+          time.sleep(5)
+          nederland5()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je bent in Nederland
 def nederland4():
      os.system("cls")
-     message = "Je bent eindelijk in Nederland. \nJe moet naar een azielzoekerscentrum om een verblijfsvergunning te krijgen. \nJe wordt er nu naar toe gebracht."
+     message = "Je bent eindelijk in Nederland. \nJe moet naar een asielzoekerscentrum om een verblijfsvergunning te krijgen. \nJe wordt er nu naar toe gebracht."
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -122,30 +191,35 @@ def nederland4():
 def nederland3():
      os.system("cls")
      print("Je zit nu al een tijdje te reizen. \nJe hebt heel veel honger.")
-     nederland3 = input("\nWat ga je doen? \n-------------------------------------------- \nA.vragen of iemand wat eten heeft \nB.niks doen \nantwoord: ")
+     nederland3 = input("\nWat ga je doen? \n-------------------------------------------- \nA.je eten eten\nB.niks eten \nantwoord: ")
      if nederland3.lower() == "a":
-          print("Iemand heeft wat te eten voor je. Je bedankt die gene en eet.")
+          print("Je pakt wat eten.")
+          time.sleep(8)
+          nederland4()
      else:
           print("Je hebt heel veel honger.")
-
+          time.sleep(5)
+          nederland4()
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat naar de meeting point.
 def nederland2():
      os.system("cls")
-     print("Achmed brengt je naar de pit stop. \nJullie zijn aan gekomen bij de meeting point. \nAchmed regelt alles voor je en vertelt om wat eten te gaan halen. ")
+     print("Achmed brengt je naar de pit stop. \nJullie zijn aangekomen bij de meetingpoint. \nAchmed regelt alles voor je en vertelt om wat eten te gaan halen. ")
      nederland2 = input("\nWat ga je doen \n-------------------------------------------- \nA.eten halen \nB.niks halen \nantwoord: ")
      if nederland2.lower() == "a":
           print("Je gaat eten halen.")
+          time.sleep(5)
           nederland3()
      else:
           print("Je haalt niks. Je hebt honger.")
+          time.sleep(5)
           nederland3()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Op naar Nederland.
 def nederland1():
      os.system("cls")
-     message = "Je vraagt aan je vriend of hij naar Nederland gaat. \nHij zegt: 'nee' \nAchmed verwijst je wel naar iemand die wel naar Nederland gaat, maar de reis duurt heel lang. \nJe vriend Achmed brengt je wel naar hem toe, sinds ze toch naar de zelfde plek moeten om een pit stop te maken"
+     message = "Je vraagt aan je vriend of hij naar Nederland gaat. \nHij zegt: 'nee' \nAchmed verwijst je wel naar iemand die wel naar Nederland gaat, maar de reis duurt heel lang. \nJe vriend Achmed brengt je wel naar hem toe, sinds ze toch naar dezelfde plek moeten om een pit stop te maken"
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -156,13 +230,15 @@ def nederland1():
 #Je bent in Turkije aangekomen. Hier ga een keuze maken van wat je verder wilt gaan doen.
 def vluchten4():
      os.system("cls")
-     print("Na een hele moeizame reis ben je eindelijk in Turkije. \nJe bent wel illegaal in Turkije zo je moet wel uitkijken. \nNou sinds je nu toch in turkije bent, start vanaf hier een nieuw verhaal. \nJe zit te twijfelen of je in Turkije wilt blijven of naar Nederland wilt door vluchten.")
+     print("Na een hele moeizame reis ben je eindelijk in Turkije. \nJe bent wel illegaal in Turkije zo je moet wel uitkijken. \nNou sinds je nu toch in Turkije bent, start vanaf hier een nieuw verhaal. \nJe zit te twijfelen of je in Turkije wilt blijven of naar Nederland wilt door vluchten.")
      vluchten4 = input("\nWat ga je kiezen? \n-------------------------------------------- \nA.in Turkije blijven \nB.naar Nederland gaan \nantwoord: ")
      if vluchten4.lower() == "a":
           print("Je blijft in Turkije.")
+          time.sleep(5)
           turkije1()
      else:
           print("Je gaat naar Nederland.") 
+          time.sleep(5)
           nederland1()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -173,22 +249,26 @@ def subvluchten1():
      subvluchten1 = input("\nWat ga je doen? \n-------------------------------------------- \nA.proberen in te houden \nB.spugen \nantwoord: ")
      if subvluchten1.lower() == "a":
           print("Je spuugt nog steeds. \nDe truck stinkt nu heel erg en de vluchteling moeten ook spugen van de stank.")
+          time.sleep(8)
           vluchten4()
      else:
           print("Je spuugt. \nDe truck stinkt nu heel erg en de vluchteling moeten ook spugen van de stank.")
+          time.sleep(8)
           vluchten4()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Achmed had je een pil gegeven en nou voel je je wat beter.
 def vluchten3():
      os.system("cls")
-     print("Je zit nu al een tijdje in de truck. \nOok al zit je niet comfortabel, dankzij die pil dat Achmed je had gegeven voel je je niet misselijk. \nJe hebt na een tijdje reizen honger. \nJe hebt een mueslireep in jou broekzak. \nEr zit een kind naast je en wilt ook graag een stukje. ")
+     print("Je zit nu al een tijdje in de truck. \nOok al zit je niet comfortabel, dankzij die pil dat Achmed je had gegeven voel je je niet misselijk. \nJe hebt na een tijdje reizen honger. \nJe hebt een mueslireep in jouw broekzak. \nEr zit een kind naast je en wilt ook graag een stukje. ")
      vluchten3 = input("Wat ga je doen ? \n-------------------------------------------- \nA.een stukje geven \nB.niks geven \nantwoord: ")
      if vluchten3.lower() == "a":
           print("Je geeft een stukje van je mueslireep.")
+          time.sleep(5)
           vluchten4()
      else:
           print("Je geeft niks. \nDat kind haat je nu.")
+          time.sleep(5)
           vluchten4()
 
 
@@ -196,20 +276,22 @@ def vluchten3():
 #hier ga je achmed vragen voor een pil of je blijft stil. dit heeft invloed op de reis.
 def vluchten2():
      os.system("cls")
-     print("Je hebt met je vriend Achmed af gesproken om te verzamelen bij Mosul en in de nacht te gaan vertrekken. \nNa een tijdje liften met een taxi ben je er eindelijk. ")
-     vluchten2 = input("\nJe bent een beetje wagenziek. \n-------------------------------------------- \nA.zeg niks \nB.informeer Achmed \nantwoord:")
+     print("Je hebt met je vriend Achmed afgesproken om te verzamelen bij Mosul en in de nacht te gaan vertrekken. \nNa een tijdje liften met een taxi ben je er eindelijk. \nJe bent een beetje wagenziek. ")
+     vluchten2 = input("\nWat ga je doen?. \n-------------------------------------------- \nA.zeg niks \nB.informeer Achmed \nantwoord:")
      if vluchten2.lower() == "a":
           print("Je blijft still en zeg niks. \nJe stapt nu de truck in met meerdere vluchtelingen.")
+          time.sleep(8)
           subvluchten1()
      else:
           print("Achmed is aardig en geeft je een pil. \nJe stapt nu de truck in met meerdere vluchtelingen.")
+          time.sleep(8)
           vluchten3()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat naar het slagveld.
 def oorlog3():
      os.system("cls")
-     message = "Je zit nu in een gepanserde auto met je ploeggenoten. \nJullie worden bekogeld door het Iraanse leger. \nZE schieten drie raketen op jullie af. \nDe bestuurder is dood... \njullie stapen de auto uit en vuren terug."
+     message = "Je zit nu in een gepantserde auto met je ploeggenoten. \nJullie worden bekogeld door het Iraanse leger. \nZe schieten drie raketten op jullie af. \nDe bestuurder is dood... \nJullie stappen de auto uit en vuren terug."
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -230,7 +312,7 @@ def oorlog3():
 #Je vermoord de leider.
 def executie2():
      os.system("cls")
-     message = "Iedereen in de zaal schrikt. \nJij probeert nog wat terroristen mee te nemen voordat je dood gaat. \nHet lukt je om nog 3 terroristen dood te schieten, maar je overal in de zaal..."
+     message = "Iedereen in de zaal schrikt. \nJij probeert nog wat terroristen mee te nemen, voordat je doodgaat. \nHet lukt je om nog 3 terroristen dood te schieten, maar je hoort ineens overal in de zaal..."
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -252,9 +334,12 @@ def oorlog2():
      oorlog2 = input("\nWat ga je doen? \n-------------------------------------------- \nA.Je wapen pakken en de leider schieten \nB.niks doen \nantwoord: ")
      if oorlog2.lower() == "a":
           print("Je pakt je wapen en schiet.")
+          time.sleep(5)
           executie2()
      else:
           print("Je doet niks en gaat ten oorlog met de wereld.")
+          time.sleep(5)
+          oorlog3()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Je gaat oorlog voeren
@@ -333,6 +418,7 @@ def accept2():
           oorlog1()
      else:
           print("De leider is niet blij.")
+          time.sleep(5)
           executie()
 
      
@@ -373,8 +459,11 @@ def vriend2():
      vriend2 = input("\nWat ga je doen? \n-------------------------------------------- \nA.het aanbod toch accepteren \nB.toch weigeren \nantwoord: ")
      if vriend2.lower() == "a":
           print("Je accepteert het aanbod.")
+          time.sleep(5)
+          accept1()
      else:
           print("Je vriend richt zijn pistool op je.")
+          time.sleep(5)
           vriend3()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------         
@@ -385,9 +474,11 @@ def vriend1():
      vriend1 = input("\nWat ga je doen. \n-------------------------------------------- \nA.het aanbod afwijzen \nB.aanbod accepteren \nantwoord: ")
      if vriend1.lower() == "a":
           print("Je vriend is teleurgesteld.")
+          time.sleep(5)
           vriend2()
      else:
           print("Je accepteert het aanbod.")
+          time.sleep(5)
           accept1()
 
 
@@ -399,9 +490,11 @@ def  blijf2():
      blijf2 = input("\nWat ga je doen. \n-------------------------------------------- \nA.ontbijten \nB.niet ontbijten. \nantwoord: ")
      if blijf2.lower() == "a":
           print("Je gaat een broodje eten.")
+          time.sleep(5)
           vriend1()
      else:
           print("Je eet geen ontbijt.")
+          time.sleep(5)
           vriend1()
 
 
@@ -427,9 +520,11 @@ def vluchten1():
      vluchten1 = input("\nWat ga je doen? \n-------------------------------------------- \nA.door smeken \nB.het accepteren \nantwoord: ")
      if vluchten1.lower() == "a":
           print("Na een tijdje smeken, komt je vriend toch op de conclusie om je mee te nemen.")
+          time.sleep(6)
           vluchten2()
      else:
           print("Vluchten kan niet meer, omdat je geen vervoer hebt. \nJe blijft nu thuis.")
+          time.sleep(6)
           blijf1()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -451,10 +546,35 @@ def begin():
      begin = input("\nWat ga je doen? \n-------------------------------------------- \nA.vluchten \nB.blijven \nantwoord: ")
      if begin.lower() == "a":
           print("Je pakt je benodigde spullen in en je bent bereid om morgen te vertrekken.")
+          time.sleep(5)
           vluchten1()
      else: 
-          print("je hebt ervoor gekozen om thuis te blijven. Je belt vervolgens je vriend, om te vertellen dat je niet gaat vluchten")
+          print("je hebt ervoor gekozen om thuis te blijven. ")
+          time.sleep(5)
           blijf1()
 
 begin()
+
+message = """
+___________.__             ___________           .___
+\__    ___/|  |__   ____   \_   _____/ ____    __| _/
+  |    |   |  |  \_/ __ \   |    __)_ /    \  / __ | 
+  |    |   |   Y  \  ___/   |        \   |  \/ /_/ | 
+  |____|   |___|  /\___  > /_______  /___|  /\____ | 
+                \/     \/          \/     \/      \/ """
+for char in message:
+     sys.stdout.write(char)
+     sys.stdout.flush()
+     time.sleep(0.02)
+time.sleep(2)
+os.system("cls")
+
+while True:
+     os.system("cls")
+     restart = input("wil je opnieuw spelen? \nJa/Nee \nantwoord: ")
+     if restart.lower() == "ja":
+          os.system("cls")
+          begin()
+     else:
+          break
 
