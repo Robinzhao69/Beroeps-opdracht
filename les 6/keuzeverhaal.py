@@ -8,7 +8,7 @@ os.system("cls")
 #Je blijft op straat leven.
 def straatleven(): 
      os.system("cls")
-     message = "Je gaat toch niet stelen. \nJe voor nu op straat leven, maar misschien gebeurd er iets onverwachts..."
+     message = "Je gaat toch niet stelen. \nJe voor nu op straat leven, maar misschien gebeurt er iets onverwachts..."
      for char in message:
           sys.stdout.write(char)
           sys.stdout.flush()
@@ -72,7 +72,7 @@ def werk2():
      print("Je solliciteert nu bij het hotel. \nJe legt de baas uit wat er allemaal is gebeurd. \nDe baas begrijpt het en houd jouw identiteit geheim. \nJe bent aangenomen. \nJe begint nu met je eerste week.")
      werk2 = input("\nJe hebt de keuze om hard te werken of niet. Wat kies je? \n-------------------------------------------- \nA.hard werken \nB.slecht je werk doen \nantwoord: ")
      if werk2.lower() == "a": 
-          message = "Je werkt hard. \nJe wordt nu beloond met een hoger loon. \nJe werkt nu al een tijdje bij de hotel en de baas heeft je geholpen om legaal in Turkije te blijven. \nJe leeft nu een gezond en veilig leven in Turkije. \nJe hebt het werken in turkije einde bereikt."
+          message = "Je werkt hard. \nJe wordt nu beloond met een hoger loon. \nJe werkt nu al een tijdje bij de hotel en de baas heeft je geholpen om legaal in Turkije te blijven. \nJe leeft nu een gezond en veilig leven in Turkije. \nJe hebt het werken in Turkije einde bereikt."
           for char in message:
                sys.stdout.write(char)
                sys.stdout.flush()
@@ -565,7 +565,7 @@ ___________.__             ___________           .___
 for char in message:
      sys.stdout.write(char)
      sys.stdout.flush()
-     time.sleep(0.02)
+     time.sleep(0.01)
 time.sleep(2)
 os.system("cls")
 
@@ -576,5 +576,12 @@ while True:
           os.system("cls")
           begin()
      else:
+          message = ("Oke ik sluit nu mezelf uit.")
+          for char in message:
+               sys.stdout.write(char)
+               sys.stdout.flush()
+               time.sleep(0.02)
+          time.sleep(2)
+          os.system("cls")
           break
 
